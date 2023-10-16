@@ -1,0 +1,39 @@
+function getRandomInt(min, max) {  
+    min = Math.ceil(min);  
+    max = Math.floor(max);  
+    return Math.floor(Math.random() * (max - min + 1)) + min;  
+  }
+
+function sayHello() {  
+    console.log("Hello, world!");  
+  }
+
+function calculateTriangleArea(base, height) {
+    if (base <= 0 || height <= 0) {
+      throw new Error("Base and height must be greater than zero");
+    }
+  
+    return (base * height) / 2;
+  }
+
+function printPrimes(start, end) {
+    for (let i = start; i <= end; i++) {
+        if (isPrime(i)) {
+            console.log(i);
+        }
+    }
+}
+
+function isPrime(num) {
+    if (num < 2) {
+        return false;
+    }
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+printPrimes(10, 20);
